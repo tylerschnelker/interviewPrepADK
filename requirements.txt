@@ -17,3 +17,6 @@ torch
 
 ## Helpful runtime utilities
 python-dotenv
+
+
+pypdf
