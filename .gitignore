@@ -206,27 +206,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-=======
-# Python cache and build artifacts
-__pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-build/
-dist/
-
-# Virtual environments
-.venv/
-venv/
-
-# Local environment config
-.env
-
-# Whisper and model cache artifacts
-.cache/
-
-# IDE / OS clutter
-.DS_Store
-.idea/
-.vscode/
->>>>>>> 2ba0d9c (intitial commit of working in terminal)
