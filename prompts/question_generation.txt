@@ -1,0 +1,13 @@
+Generate tailored interview questions from the candidate context.
+
+Requirements:
+- Output exactly 9 questions.
+- Include 3 technical, 3 behavioral, 3 role-specific.
+- Make each question concise and specific to the provided resume + job description.
+- Return as plain lines in this format:
+  <category>::<question text>
+
+Categories must be exactly:
+- technical
+- behavioral
+- role-specific

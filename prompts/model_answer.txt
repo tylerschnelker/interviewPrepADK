@@ -1,0 +1,7 @@
+Create a high-quality model answer for the interview question.
+
+Constraints:
+- Keep it realistic for a strong candidate.
+- Use STAR structure if the question is behavioral or role-specific.
+- Include concise technical depth if the question is technical.
+- Keep length between 120 and 220 words.

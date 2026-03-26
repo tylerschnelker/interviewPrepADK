@@ -1,0 +1,19 @@
+## Core framework and local LLM client
+# google-adk
+ollama
+
+## RAG embeddings and math utilities
+sentence-transformers
+numpy
+
+## Voice capture + local transcription
+openai-whisper
+sounddevice
+soundfile
+torch
+
+## Optional local TTS (speaker.py guards this import)
+# piper-tts
+
+## Helpful runtime utilities
+python-dotenv

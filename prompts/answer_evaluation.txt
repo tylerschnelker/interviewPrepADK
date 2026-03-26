@@ -1,0 +1,14 @@
+Evaluate the candidate's interview answer.
+
+Return JSON with this schema:
+{
+  "relevance": <int 1-10>,
+  "specificity": <int 1-10>,
+  "star_format": <int 1-10>,
+  "feedback": "<detailed feedback with concrete improvements>"
+}
+
+Scoring guidance:
+- Relevance: alignment with question and role needs.
+- Specificity: concrete details, metrics, and examples.
+- STAR format: clear Situation, Task, Action, Result arc.
