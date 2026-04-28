@@ -23,3 +23,6 @@ context/*
 
 # Personal resume (user-specific)
 *.pdf
+
+# Development/test files
+wisper_test.py

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# interviewPrepADK
-=======
 # interview-agent
 
 Local, voice-interactive interview preparation assistant built with a planner-executor architecture, ADK-style tool registration, local Ollama (`llama3.1:70b`), local Whisper transcription, and local sentence-transformers retrieval.
@@ -164,4 +161,3 @@ During the interview loop:
 - Add persistence (SQLite/JSON) for session history.
 - Add richer rubric logic in evaluator prompt/tool.
 - Add streaming ASR or VAD for better voice UX.
->>>>>>> 2ba0d9c (intitial commit of working in terminal)
