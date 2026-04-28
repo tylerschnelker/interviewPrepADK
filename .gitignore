@@ -16,3 +16,10 @@ venv/
 # Runtime artifacts
 voice_recordings/
 .cache/
+
+# Context files (except README)
+context/*
+!context/README.txt
+
+# Personal resume (user-specific)
+*.pdf
