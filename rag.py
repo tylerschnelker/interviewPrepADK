@@ -4,11 +4,18 @@ No external vector database is used. Documents are loaded from /context,
 chunked in-memory, embedded locally, and retrieved at runtime.
 """
 
+import os
 from pathlib import Path
 from typing import List, Tuple
 
 import numpy as np
 from sentence_transformers import SentenceTransformer
+
+from config import settings
+
+# Set HF token if available to avoid unauthenticated warnings
+if settings.hf_token:
+    os.environ["HF_TOKEN"] = settings.hf_token
 
 
 def chunk_text(text: str, chunk_size: int = 500, overlap: int = 100) -> List[str]:

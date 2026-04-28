@@ -7,6 +7,14 @@ throughout the project and makes local setup easier to reason about.
 import os
 from dataclasses import dataclass
 
+def _cuda_available() -> bool:
+    """Check if CUDA is available for GPU acceleration."""
+    try:
+        import torch
+        return torch.cuda.is_available()
+    except Exception:
+        return False
+
 from dotenv import load_dotenv
 
 
@@ -23,6 +31,8 @@ class Settings:
     audio_sample_rate: int = int(os.getenv("AUDIO_SAMPLE_RATE", "16000"))
     recordings_dir: str = os.getenv("RECORDINGS_DIR", "./voice_recordings")
     piper_model_path: str = os.getenv("PIPER_MODEL_PATH", "")
+    hf_token: str = os.getenv("HF_TOKEN", "")
+    cuda_available: bool = _cuda_available()
 
 
 settings = Settings()

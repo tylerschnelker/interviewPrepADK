@@ -18,10 +18,8 @@ def _read_prompt() -> str:
 @adk_tool("evaluate_answer")
 def evaluate_answer(question_text: str, transcript: str) -> AnswerFeedback:
     """Returns structured scoring and coaching feedback."""
-    prompt = _read_prompt()
-    raw = chat(
-        f"{prompt}\n\nQuestion:\n{question_text}\n\nCandidate answer:\n{transcript}\n"
-    )
+    prompt = _read_prompt().format(question=question_text, answer=transcript)
+    raw = chat(prompt, format_json=True)
     try:
         parsed = json.loads(raw)
         return AnswerFeedback(

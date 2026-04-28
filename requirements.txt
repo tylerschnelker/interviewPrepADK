@@ -7,10 +7,9 @@ sentence-transformers
 numpy
 
 ## Voice capture + local transcription
-openai-whisper
+faster-whisper
 sounddevice
 soundfile
-torch
 
 ## Optional local TTS (speaker.py guards this import)
 # piper-tts
