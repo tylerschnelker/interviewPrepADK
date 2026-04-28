@@ -1,8 +1,6 @@
 # interview-agent
 
-Local, voice-interactive interview preparation assistant built with a planner-executor architecture, ADK-style tool registration, local Ollama (`llama3.1:70b`), local Whisper transcription, and local sentence-transformers retrieval.
-
-No external API calls are required in the runtime flow.
+A local, voice-interactive interview preparation assistant that generates tailored interview questions from a resume and job description, captures spoken answers via microphone, transcribes them locally with Whisper, evaluates each answer on relevance, specificity, and STAR format, provides model answers on demand, and produces an end-of-session readiness score with top improvement areas. Question generation is augmented by a RAG pipeline that chunks context documents with configurable overlap, embeds them locally via sentence-transformers, and retrieves the most relevant chunks by cosine similarity at query time — all in-process with no external vector database. The entire runtime runs without any cloud API calls — LLM generation uses a local Ollama model, speech-to-text uses local Whisper, and retrieval uses local embeddings, so all user data stays on the machine. The system is built on a planner-executor architecture where a deterministic planner selects the next action from session state and a tool executor carries it out, with an ADK-style decorator-based tool registry that keeps interview logic cleanly separated from orchestration.
 
 ## What this project does
 
